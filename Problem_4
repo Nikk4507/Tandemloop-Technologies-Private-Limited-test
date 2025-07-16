@@ -24,6 +24,6 @@ public class Main {
         for (int i = 1; i <= 9; i++) {
             System.out.println("Multiples of " + i + " : " + multiplesCount.get(i));
         }
-        System.out.println("Name: Nikhil Verma, Thank You!!");
+        System.out.println("\nName: Nikhil Verma, Thank You!!");
     }
 }

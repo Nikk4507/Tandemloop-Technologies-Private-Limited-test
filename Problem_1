@@ -1,0 +1,60 @@
+import java.util.*;
+
+class Calculator {
+    public double Res(double a, double b, String operation) {
+        operation = operation.toLowerCase();
+
+        if (operation.equals("add")) {
+            return a + b;
+        } else if (operation.equals("sub")) {
+            return a - b;
+        } else if (operation.equals("multi")) {
+            return a * b;
+        } else if (operation.equals("div")) {
+            if (b != 0) {
+                return a / b;
+            } else {
+                System.out.println("Division by zero is not allowed.");
+                return 0;
+            }
+        } else {
+            System.out.println("Invalid operation type.");
+            return 0;
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Calculator c = new Calculator();
+        Scanner sc = new Scanner(System.in);
+
+        int runAgain = 1;  
+
+        while (runAgain == 1) {
+            double a, b;
+            String op;
+
+            System.out.print("Enter the value of a: ");
+            a = sc.nextDouble();
+
+            System.out.print("Enter the value of b: ");
+            b = sc.nextDouble();
+
+            System.out.print("Enter the Operation (add, sub, multi, div): ");
+            sc.nextLine(); 
+            op = sc.nextLine();
+
+            double result = c.Res(a, b, op);
+            System.out.println("Result: " + result);
+
+
+            System.out.print("Do you want to perform another operation? (1 for Yes, 0 for No): ");
+            runAgain = sc.nextInt();
+        }
+
+        System.out.println("Calculator exited.");
+         System.out.println("\nName: Nikhil Verma, Thank You!!");
+        sc.close();
+    }
+}

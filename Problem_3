@@ -16,7 +16,7 @@ public class Main {
             System.out.print(oddNum+",");
             oddNum += 2;
         }
-        System.out.println("Name: Nikhil Verma, Thank You!!");
+        System.out.println("\nName: Nikhil Verma, Thank You!!");
         sc.close();
     }
 }

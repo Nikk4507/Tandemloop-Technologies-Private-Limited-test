@@ -1,0 +1,22 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        int a,oddNum=1;
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter the value of a: ");
+        a = sc.nextInt();
+
+       
+        int count = (a % 2 == 0) ? a - 1 : a;
+
+        System.out.print("Output: ");
+        for(int i=0;i<count;i++){
+            System.out.print(oddNum+",");
+            oddNum += 2;
+        }
+        System.out.println("Name: Nikhil Verma, Thank You!!");
+        sc.close();
+    }
+}
